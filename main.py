@@ -15,6 +15,7 @@ from settings import WorldCupTeam
 from settings import WorldCupSim
 import copy as copy
 import pandas as pd
+import scipy as scipy
 
 # World Cup team Class
 class WorldCupTeam(object):
