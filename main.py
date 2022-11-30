@@ -2,32 +2,37 @@
 My final Project
 
 '''
+
+#sources 
+#Piero Paialunga
+#https://towardsdatascience.com/2022-world-cup-simulator-using-data-science-with-python-6bf56a543436
+
 #file path to add libraries 
 #C:\Users\Maverick.Hamer24\AppData\Local\Programs\Python\Python310\Scripts
 #imported libraries 
-import pygame as pg
 import numpy as np
-import pandas as pd 
-import matplotlib.pyplot as plt 
-import seaborn as sns
-plt.style.use('ggplot')
-plt.rcParams['font.family'] = 'sans-serif' 
-plt.rcParams['font.serif'] = 'Ubuntu' 
-plt.rcParams['font.monospace'] = 'Ubuntu Mono' 
-plt.rcParams['font.size'] = 14 
-plt.rcParams['axes.labelsize'] = 12 
-plt.rcParams['axes.labelweight'] = 'bold' 
-plt.rcParams['axes.titlesize'] = 12 
-plt.rcParams['xtick.labelsize'] = 12 
-plt.rcParams['ytick.labelsize'] = 12 
-plt.rcParams['legend.fontsize'] = 12 
-plt.rcParams['figure.titlesize'] = 12 
-plt.rcParams['image.cmap'] = 'jet' 
-plt.rcParams['image.interpolation'] = 'none' 
-plt.rcParams['figure.figsize'] = (12, 10) 
-plt.rcParams['axes.grid']=True
-plt.rcParams['lines.linewidth'] = 2 
-plt.rcParams['lines.markersize'] = 8
-colors = ['xkcd:pale orange', 'xkcd:sea blue', 'xkcd:pale red', 'xkcd:sage green', 'xkcd:terra cotta', 'xkcd:dull purple', 'xkcd:teal', 'xkcd: goldenrod', 'xkcd:cadet blue',
-'xkcd:scarlet']
+from settings import WorldCupTeam
+from settings import WorldCupSim
+import copy as copy
+import pandas as pd
 
+# World Cup team Class
+class WorldCupTeam(object):
+    def __init__(self, group,name,seed,hostname, strength):
+       # Name means the country name
+        self.name = name 
+        self.group = group
+        self.seed = seed
+        self.hometeam = name=='Qatar'
+        self.group_matches = 0
+        self.total_matches = 0
+        self.points = 0
+        self.goals_for = 0
+        self.goals_against = 0
+        self.host = self.name == hostname
+        self.strength = 0
+        
+              
+        
+    def __repr__(self):
+        return "%s, %s, %s" % (self.name,self.group,)
