@@ -1,5 +1,5 @@
-from WorldCupGoups import WorldCupGroups
-from GoHomeRounds import GoHomeRounds
+from WorldCupGroups import WorldCupGroups
+from GoHomeRounds import
 
 class WorldCupSim(object):
     def __init__(self,group_names,teams,verbose):
@@ -21,7 +21,7 @@ class WorldCupSim(object):
                 g.print_matches()
                 g.print_table()
         # BUild knock-out stage of tournament
-        self.KnockOut = GoHomeRounds(self.groups)
+        self.KnockOut =GoHomeRounds(self.groups)
         # ROUND OF 16
         self.KnockOut.Round16()
         self.KnockOut.simulate_Round16_matches()

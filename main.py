@@ -36,7 +36,3 @@ import scipy as scipy
         
               
         
-    def __repr__(self):
-        return "%s, %s, %s" % (self.name,self.group,)
-
-        
