@@ -6,7 +6,7 @@ My final Project
 #sources 
 #Piero Paialunga
 #https://towardsdatascience.com/2022-world-cup-simulator-using-data-science-with-python-6bf56a543436
-
+#http://www.eloratings.net/about
 #file path to add libraries 
 #C:\Users\Maverick.Hamer24\AppData\Local\Programs\Python\Python310\Scripts
 #imported libraries 

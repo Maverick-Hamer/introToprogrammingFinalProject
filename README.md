@@ -1,15 +1,15 @@
 # introToprogrammingFinalProject
 
-# Keep it up
-player goal to keep ball in the air. player that drops it loses.
+# wolrd cup
+Simulates the world cup to find a winner
 
 # Description
-A two player game where a ball is throw in the air between players. first to 5.
+A series of classes that combine to simulate the group stages, Round of 16, Quarter Finals, Semi Finals, and the Final and determine a winner 
 
 # Getting Started
 # Dependencies
-Describe any prerequisites, libraries, OS version, etc., needed before installing program.
-ex. Python 3.x, Pygame, etc.
+Installing these librares
+
 # Installing
 How/where to download your program
 Any modifications needed to be made to files/folders
@@ -19,7 +19,7 @@ Step-by-step bullets
 code blocks for commands
 # Help
 Any advise for common problems or issues.
-
+If files to not pull from eachother make sure they are all python files
 command to run if program contains helper info
 # Authors
 Contributors names and contact info
@@ -38,7 +38,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 
 # Acknowledgments
 Inspiration, code snippets, etc.
-
+https://towardsdatascience.com/2022-world-cup-simulator-using-data-science-with-python-6bf56a543436
 w3Schools
 PyGame
 Automate The Boring Stuff
