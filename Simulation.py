@@ -1,5 +1,5 @@
 from WorldCupGroup import WorldCupGroup
-from WorldCupKnockOut import WorldCupKnockOut
+from GoHomeRounds import WorldCupKnockOut
 
 class WorldCupSim(object):
     def __init__(self,group_names,teams,verbose):
