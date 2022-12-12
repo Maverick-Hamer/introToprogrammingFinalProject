@@ -19,10 +19,10 @@ class WorldCupMatch(object):
             return "Match %s vs %s." % (self.team1.name, self.team2.name)
         
     def elo_only_model(self):
-        # log( mu ) = const + xe*(elo_diff/100) + eloHA*IsHost?
         self.const = 0.1557
         self.xe = 0.169 # coeff elo_diff / 100
-        self.eloHA = 0.182/self.xe*100 # get regression coefficient in units of elo difference
+        self.eloHA = 0.182/self.xe*100
+     # get regression coefficient in units of elo difference
         self.model = "Elo"
             
     def set_group_stats(self,team1_goals, team2_goals, stage):
@@ -112,7 +112,7 @@ class WorldCupMatch(object):
             self.winner = self.team1
         elif team1_success < team2_success:
             self.winner = self.team2
-        else: # determine winner based on relative penalty strenghts
+        else: # determine winner based on penalty strenghts
             high = self.team1.penaltyskill + self.team2.penaltyskill
             if np.random.uniform(size=1,high=high)<self.team1.penaltyskill:
                 self.winner = self.team1
