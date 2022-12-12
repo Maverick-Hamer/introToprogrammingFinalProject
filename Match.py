@@ -13,14 +13,14 @@ class WorldCupMatch(object):
         self.team1 = team1
         self.team2 = team2
         self.eloK = 60 # for world cup (see http://www.eloratings.net/about)
-        self.run_hot = True
+        self.run_change = True
         self.elo_only_model()
         
     def __repr__(self,name):
         if self.played:
-            return "Match %s %s vs %s %s" % (self.team1.name, self.team1_goals, self.team2_goals, self.team2.name)
+            return "Match %s %s vs %s %s"  (self.team1.name, self.team1_goals, self.team2_goals, self.team2.name)
         else:
-            return "Match %s vs %s." % (self.team1.name, self.team2.name)
+            return "Match %s vs %s."  (self.team1.name, self.team2.name)
         
     def elo_only_model(self):
         self.const = 0.1557
@@ -85,8 +85,8 @@ class WorldCupMatch(object):
         # Simulate penalty shoot-out if necessary
         if penalties and team1_goals==team2_goals: 
             self.penalty_shootout()
-        # Finally, update elo score for each team if running 'hot'
-        if self.run_hot:
+        # Finally, update elo score for each team if running 'change'
+        if self.run_change:
             self.update_elo_scores_ELORATING( team1_goals-team2_goals, elo_diff)
         if verbose:
             print; "Elos: %1.1f, %1.1f" % (self.team1.elorank,self.team2.elorank)
