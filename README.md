@@ -9,21 +9,23 @@ A series of classes that combine to simulate the group stages, Round of 16, Quar
 # Getting Started
 # Dependencies
 Installing these librares
-
+scipy
+scip.stats
+numpty
+copy
+pandas
 # Installing
-How/where to download your program
-Any modifications needed to be made to files/folders
+dowload from github
+install libraries from above
 # Executing program
-How to run the program
-Step-by-step bullets
-code blocks for commands
+After dowloading files check that it all dowloaded proprely
+run the main.py file and see who wins the world cup
 # Help
 Any advise for common problems or issues.
 If files to not pull from eachother make sure they are all python files
-command to run if program contains helper info
+if blockes of code are blocked out a quick fix is adding it to a new python file and moving it from there
 # Authors
 Contributors names and contact info
-
 ex. Maverick Hamer
 ex. maverickhamer06@gmail.com
 
@@ -39,6 +41,7 @@ This project is licensed under the MIT License - see the LICENSE.md file for det
 # Acknowledgments
 Inspiration, code snippets, etc.
 https://towardsdatascience.com/2022-world-cup-simulator-using-data-science-with-python-6bf56a543436
+http://www.eloratings.net/about
 w3Schools
 PyGame
 Automate The Boring Stuff
