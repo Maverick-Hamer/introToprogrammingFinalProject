@@ -1,3 +1,7 @@
+#sources
+# for world cup (see http://www.eloratings.net/about)
+# has the team strenghth data
+
 import scipy as scipy
 import scipy.stats
 import numpy as np
@@ -12,7 +16,7 @@ class WorldCupMatch(object):
         self.run_hot = True
         self.elo_only_model()
         
-    def __repr__(self):
+    def __repr__(self,name):
         if self.played:
             return "Match %s %s vs %s %s" % (self.team1.name, self.team1_goals, self.team2_goals, self.team2.name)
         else:
@@ -25,12 +29,11 @@ class WorldCupMatch(object):
      # get regression coefficient in units of elo difference
         self.model = "Elo"
             
-    def set_group_stats(self,team1_goals, team2_goals, stage):
+    def set_group_stats(self,team1_goals, team2_goals, stage, group_matches):
         # update 
         self.played = True
         if stage=='GRP':
-            self.team1.group_matches += 1
-            self.team2.group_matches += 1
+           self.team1.group_matches += 1
         self.team1.total_matches += 1
         self.team2.total_matches += 1
         self.team1_goals = team1_goals
@@ -103,8 +106,9 @@ class WorldCupMatch(object):
         self.team2.elorank += K * (We-W)
 
 
-    def penalty_shootout(self, Ninit = 5):
+    def penalty_shootout(self, penaltyskill,Ninit = 5):
         # generate 5 penalties each and check against skill
+        self.penaltyskill
         self.penalties = True
         team1_success = np.sum(np.random.uniform(size=Ninit)<=self.team1.penaltyskill)
         team2_success = np.sum(np.random.uniform(size=Ninit)<=self.team2.penaltyskill)

@@ -1,5 +1,5 @@
 class WorldCupTeam(object):
-    def __init__(self, group,name,seed,hostname, strength):
+    def __init__(self, group,name,seed,hostname,strength,group_matches,total_matches,points,goals_for,goals_against):
        # Name means the country name
         self.name = name 
         self.group = group
