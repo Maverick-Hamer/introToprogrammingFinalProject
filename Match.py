@@ -106,7 +106,7 @@ class WorldCupMatch(object):
         self.team2.elorank += K * (We-W)
 
 
-    def penalty_shootout(self, penaltyskill,Ninit = 5):
+    def penalty_shootout(self,penaltyskill,Ninit = 5):
         # generate 5 penalties each and check against skill
         self.penaltyskill
         self.penalties = True

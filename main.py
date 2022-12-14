@@ -19,6 +19,10 @@ from Simulation import WorldCupSim
 import copy as copy
 import pandas as pd
 import scipy as scipy
+from WorldCupGroup import WorldCupGroup
+from GoHomeRounds import WorldCupKnockOut
+import scipy.stats
+from Match import WorldCupMatch
 
 
 
@@ -46,10 +50,6 @@ class WorldCupTeam(object):
 #sources
 # for world cup (see http://www.eloratings.net/about)
 # has the team strenghth data
-
-import scipy as scipy
-import scipy.stats
-import numpy as np
 
 class WorldCupMatch(object):
     def __init__(self,team1,team2):
@@ -169,8 +169,7 @@ class WorldCupMatch(object):
                 self.winner = self.team2
 
 
-import numpy as np
-from Match import WorldCupMatch
+
 
 class WorldCupKnockOut(object):
     def __init__(self,groups):
@@ -261,8 +260,6 @@ class WorldCupKnockOut(object):
                 print; m 
 
 
-from WorldCupGroup import WorldCupGroup
-from GoHomeRounds import WorldCupKnockOut
 
 class WorldCupSim(object):
     def __init__(self,group_names,teams,verbose):
