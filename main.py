@@ -33,8 +33,8 @@ class WorldCupTeam(object):
         self.group = group
         self.seed = seed
         self.hometeam = name=='Qatar'
-        self.group_matches = 0
-        self.total_matches = 0
+        self.group_matches = 52
+        self.total_matches = 64
         self.points = 0
         self.goals_for = 0
         self.goals_against = 0

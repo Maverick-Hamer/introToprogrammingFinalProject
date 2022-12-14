@@ -22,7 +22,7 @@ After dowloading files check that it all dowloaded proprely
 run the main.py file and see who wins the world cup
 # Help
 Any advise for common problems or issues.
-If files to not pull from eachother make sure they are all python files
+If files do not pull from eachother make sure they are all python files
 if blockes of code are blocked out a quick fix is adding it to a new python file and moving it from there
 # Authors
 Contributors names and contact info

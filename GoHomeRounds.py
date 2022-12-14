@@ -61,7 +61,7 @@ class WorldCupKnockOut(object):
         for m in self.QFmatches:
             self.QFteamnames.append(m.team1.name)
             self.QFteamnames.append(m.team2.name)
-        
+    
     def SemiFinal(self):
         # Semi final matches
         self.SFmatches = []
@@ -78,7 +78,7 @@ class WorldCupKnockOut(object):
         self.Finalteamnames = [self.Final[0].team1.name, self.Final[0].team2.name]
     
         
-    def print_matches(self,matches):
+    def print_matches(self,matches,):
         print
         for m in matches:
             if m.played:
