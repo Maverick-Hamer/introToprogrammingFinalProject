@@ -37,7 +37,9 @@ class WorldCupGroup(object):
         self.table = sorted(self.group_teams,key = lambda team: (team.points,team.goal_dif,team.goals_for), reverse=True)        
         self.winner = self.table[0]        
         self.runner = self.table[1]        
-        
+
+
+       #this chunk of code sets up how the table will the look with all the teams in a group with each teams stats 
     def print_table(self): # print the group tables
         self.build_table()   
         print; "***** GROUP %s Table ******" % self.group_name
